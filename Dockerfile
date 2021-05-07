@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM jenkins/inbound-agent
 ARG GOPATH=/usr/local/go
 ENV PATH=$PATH:/usr/local/go/bin
 
