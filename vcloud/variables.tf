@@ -18,4 +18,7 @@ variable "vcd_url" {
   description = "vCloud URL"
 }
 
-variable "allow_unverified_ssl" {}
+variable "allow_unverified_ssl" {
+  description = "Allow connection to self-signed VCD SSL certificates"
+}
+
