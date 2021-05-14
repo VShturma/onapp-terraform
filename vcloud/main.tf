@@ -17,7 +17,7 @@ resource "vcd_vapp_vm" "cp" {
   cpus = 2
   network {
     type = "org"
-    name = "management"
+    name = "10.77.0.1/24"
     ip_allocation_mode = "MANUAL"
     ip = "10.77.0.235"
     connected = true
