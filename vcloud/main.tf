@@ -12,7 +12,7 @@ resource "vcd_vapp_vm" "cp" {
   name = "cp"
   computer_name = "cp"
   catalog_name = "ShturmaCatalog"
-  template_name = "CentOS7template"
+  template_name = "CentOS7tmpl"
   memory = 4096
   cpus = 2
   network {
