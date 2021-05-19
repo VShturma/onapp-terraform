@@ -1,5 +1,6 @@
 ---
 - hosts: cp
+  become: yes
   roles:
     - common
     - cp
