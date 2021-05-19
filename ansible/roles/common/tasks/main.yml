@@ -1,0 +1,12 @@
+---
+- name: Update the OS
+  yum:
+    name: '*'
+    state: latest
+
+- name: Install OnApp repo
+  command: rpm -Uvh http://rpm.repo.onapp.com/repo/onapp-repo-{{ onapp_version }}.noarch.rpm
+  register: command_result
+  failed_when: command_result.rc > 0 and 'already installed' not in command_result.stderr
+
+

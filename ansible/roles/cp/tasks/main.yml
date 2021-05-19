@@ -1,0 +1,8 @@
+---
+- name: Install onapp-cp-install
+  yum:
+    name: onapp-cp-install
+    state: latest
+
+- name: Install CP
+  command: /onapp/onapp-cp-install/onapp-cp-install.sh -a

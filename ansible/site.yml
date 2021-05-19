@@ -1,0 +1,5 @@
+---
+- hosts: cp
+  roles:
+    - common
+    - cp
