@@ -1,9 +1,9 @@
 ---
 - hosts: localhost
   name: Wait 300 seconds for port 22 to become open
-        wait_for:
-          port: 22
-          host: "{{ inventory_hostname }}"
+  wait_for:
+    port: 22
+    host: "{{ inventory_hostname }}"
 
 - hosts: cp
   become: yes
