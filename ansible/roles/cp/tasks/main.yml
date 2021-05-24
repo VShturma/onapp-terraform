@@ -17,3 +17,7 @@
   lineinfile:
     path: /etc/httpd/conf.d/onapp.conf
     line: "PassengerStartTimeout 600"
+
+- name: Reload Apache
+  systemd:
+    state: reloaded
