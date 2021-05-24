@@ -3,6 +3,11 @@
   yum:
     name: onapp-cp-install
     state: latest
+- name: Check whether OnApp is installed
+  stat:
+    path: /onapp/interface/config/on_app.yml
+  register: onapp_installed
 
 - name: Install CP
   command: /onapp/onapp-cp-install/onapp-cp-install.sh -a
+  when: not onapp_installed.stat.exists
