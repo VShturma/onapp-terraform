@@ -20,4 +20,5 @@
 
 - name: Reload Apache
   systemd:
+    name: httpd
     state: reloaded
