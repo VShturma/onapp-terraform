@@ -3,6 +3,7 @@
   yum:
     name: onapp-cp-install
     state: latest
+
 - name: Check whether OnApp is installed
   stat:
     path: /onapp/interface/config/on_app.yml
@@ -11,3 +12,8 @@
 - name: Install CP
   command: /onapp/onapp-cp-install/onapp-cp-install.sh -a
   when: not onapp_installed.stat.exists
+
+- name: Add PassengerStartTimeout
+  lineinfile:
+    path: /etc/httpd/conf.d/onapp.conf
+    line: "PassengerStartTimeout 600"
