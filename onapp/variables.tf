@@ -9,3 +9,7 @@ variable "onapp_token" {
 variable "onapp_url" {
   description = "OnApp Control Panel URL"
 }
+
+variable "license_key" {
+  description = "OnApp license key"
+}
