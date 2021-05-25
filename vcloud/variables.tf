@@ -32,8 +32,6 @@ variable "allow_unverified_ssl" {
 
 variable "vcd_vapp_name" {}
 
-variable "vcd_vapp_network_name" {}
-
 variable "vcd_vapp_network_name" {
   description = "vApp org network name"
   default = "10.77.0.1/24"
