@@ -56,3 +56,7 @@ variable "vcd_vm_cp_template_name" {}
 variable "vcd_vm_cp_memory" {}
 
 variable "vcd_vm_cp_cpus" {}
+
+variable "vcd_vm_cp_name" {}
+
+variable "vcd_vm_cp_computer_name" {}
