@@ -1,6 +1,5 @@
 variable "vcd_vapp_name" {
   description = "vApp name"
-  default = "OnApp"
 }
 
 variable "vcd_org_network_name" {
@@ -9,12 +8,10 @@ variable "vcd_org_network_name" {
 
 variable "vcd_vm_cp_name" {
   description = "CP VM name"
-  default = "cp"
 }
 
 variable "vcd_vm_cp_computer_name" {
   description = "CP VM computer name"
-  default = "cp.localdomain"
 }
 
 variable "vcd_catalog_name" {
@@ -27,10 +24,8 @@ variable "vcd_template_name" {
 
 variable "vcd_vm_cp_memory" {
   description = "Amount of CP VM memory"
-  default = 4096
 }
 
 variable "vcd_vm_cp_cpus" {
   description = "Amount of CP VM CPUs"
-  default = 2
 }
