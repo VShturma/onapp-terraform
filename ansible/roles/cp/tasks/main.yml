@@ -10,7 +10,7 @@
   register: onapp_installed
 
 - name: Install CP
-  command: /onapp/onapp-cp-install/onapp-cp-install.sh -v {{ onapp_package  }}-a
+  command: /onapp/onapp-cp-install/onapp-cp-install.sh -v {{ onapp_package  }} -a
   when: not onapp_installed.stat.exists
 
 - name: Add PassengerStartTimeout
