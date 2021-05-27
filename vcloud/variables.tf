@@ -79,6 +79,18 @@ variable "vcd_vm_cp_computer_name" {
 # OnApp configuration #
 #######################
 
+variable "onapp_email" {
+  description = "OnApp user login"
+}
+
+variable "onapp_token" {
+  description = "OnApp user password"
+}
+
+variable "onapp_url" {
+  description = "OnApp Control Panel URL"
+}
+
 variable "onapp_license_key" {
   description = "OnApp license key"
 }
