@@ -73,3 +73,12 @@ variable "vcd_vm_cp_computer_name" {
   description = "CP VM computer name"
   default = "cp.localdomain"
 }
+
+
+#######################
+# OnApp configuration #
+#######################
+
+variable "onapp_license_key" {
+  description = "OnApp license key"
+}

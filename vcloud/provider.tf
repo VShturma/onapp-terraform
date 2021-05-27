@@ -7,3 +7,10 @@ provider "vcd" {
   url                  = var.vcd_url
   allow_unverified_ssl = var.allow_unverified_ssl
 }
+
+provider "onapp" {
+  allow_unverified_ssl  = true
+  email                 = var.onapp_email
+  token                 = var.onapp_token
+  url                   = var.onapp_url
+}

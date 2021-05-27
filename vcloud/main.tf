@@ -10,3 +10,9 @@ module "vcloud" {
   vcd_vm_cp_memory = var.vcd_vm_cp_memory
   vcd_vm_cp_cpus = var.vcd_vm_cp_cpus
 }
+
+module "onapp" {
+  source = "./modules/onapp"
+
+  onapp_license_key = var.license_key  
+}
