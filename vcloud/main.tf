@@ -14,5 +14,5 @@ module "vcloud" {
 module "onapp" {
   source = "./modules/onapp"
 
-  onapp_license_key = var.license_key  
+  license_key = var.onapp_license_key  
 }
