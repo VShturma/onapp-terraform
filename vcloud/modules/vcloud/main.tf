@@ -18,8 +18,7 @@ resource "vcd_vapp_vm" "cp" {
   network {
     type = "org"
     name = "10.77.0.1/24"
-    ip_allocation_mode = "MANUAL"
-    ip = "10.77.0.235"
+    ip_allocation_mode = "POOL"
     connected = true
   }
   customization {
