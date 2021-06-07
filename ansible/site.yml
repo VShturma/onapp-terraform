@@ -1,11 +1,5 @@
 ---
 - hosts: cp
-  tasks:
-    - name: Wait for SSH port to become open
-      wait_for:
-        port: 22
-        delay: 10
-      delegate_to: localhost
   become: yes
   roles:
     - common

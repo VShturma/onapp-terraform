@@ -18,6 +18,7 @@ node('docker-onapp-agent') {
   }
 
   stage('ansible-vcloud') {
+    sh 'sleep 10'
     dir('ansible') {
       ansiblePlaybook credentialsId: 'ssh-jenkins-agent', disableHostKeyChecking: true, inventory: 'inventory', playbook: 'site.yml'
     }
