@@ -6,11 +6,9 @@ ENV PATH=$PATH:/usr/local/go/bin
 USER root
 
 RUN apt update && \
-    apt -y install sshpass wget git unzip make python3
+    apt -y install sshpass wget git unzip make python3 python3-pip
 
-RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
-    python3 get-pip.py && \
-    python3 -m pip install ansible
+RUN pip3 install ansible
 
 RUN wget https://releases.hashicorp.com/terraform/0.14.10/terraform_0.14.10_linux_amd64.zip && \
     unzip terraform_0.14.10_linux_amd64.zip && \
