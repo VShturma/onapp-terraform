@@ -5,11 +5,12 @@ ENV PATH=$PATH:/usr/local/go/bin
 
 USER root
 
-RUN echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" >> /etc/apt/sources.list && \
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
-
 RUN apt update && \
-    apt -y install sshpass wget git unzip make ansible python3
+    apt -y install sshpass wget git unzip make python3
+
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+    python get-pip.py && \
+    python -m pip install ansible
 
 RUN wget https://releases.hashicorp.com/terraform/0.14.10/terraform_0.14.10_linux_amd64.zip && \
     unzip terraform_0.14.10_linux_amd64.zip && \
